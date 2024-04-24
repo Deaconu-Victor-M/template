@@ -22,7 +22,10 @@ export default {
           50: '#FFFCFB', // Background
           400: '#F55C30',
           500: '#F04941',
-        }
+        },
+        grey: {
+          100: '#F2F0F0'
+        },
       },
       borderRadius: {
         'small': '6px',
@@ -51,6 +54,9 @@ export default {
         // => @media (min-width: 1440px) { ... }
 
       },
+      maxWidth: {
+        'screen': '1440px',
+      }
     },
   },
   plugins: [],
