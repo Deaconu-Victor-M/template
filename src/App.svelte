@@ -1,9 +1,13 @@
 <script>
-  import star from "./assets/svg/star.svg";
   import profile1 from "/src/assets/images/profiles/profile1.webp";
   import profile2 from "/src/assets/images/profiles/profile2.webp";
   import profile3 from "/src/assets/images/profiles/profile3.webp";
   import profile4 from "/src/assets/images/profiles/profile4.avif";
+
+  import buildWith from "/src/assets/images/apps/built-with-pmfmai.webp";
+
+  import star from "./assets/svg/star.svg";
+  import arrow from "/src/assets/svg/hand-drawn-arrow.svg";
   import { onMount } from "svelte";
 
   let scrolled = false;
@@ -58,7 +62,7 @@
   <div class=" h-[50px] tablet_landscape:h-[100px]"></div>
   <!--! ========= HERO ========= -->
   <section
-    class="flex flex-col items-center justify-between w-full h-full gap-12 py-3 px-9 laptop:items-end laptop:flex-row"
+    class="flex flex-col items-center justify-between w-full h-full gap-12 px-4 py-3 tablet:px-9 laptop:items-end laptop:flex-row"
   >
     <!--? ========= Text Block ========= -->
     <div class="flex flex-col items-center gap-12 laptop:items-start">
@@ -195,7 +199,9 @@
             <img src={star} alt="star" />
             <img src={star} alt="star" />
           </div>
-          <p class="text-xl text-center laptop:text-start text-black/60">
+          <p
+            class="text-lg text-center tablet:text-xl laptop:text-start text-black/60"
+          >
             Trusted by over <b>500+</b> creators
           </p>
         </div>
@@ -203,7 +209,51 @@
     </div>
     <!--? ========= Illustration ========= -->
     <div
-      class="w-full max-w-[500px] aspect-square bg-grey-100 rounded-big"
-    ></div>
+      class="w-full tablet:max-w-[500px] laptop:aspect-square bg-grey-100 rounded-medium tablet:rounded-big relative flex flex-col laptop:justify-end justify-start laptop:items-end py-4 tablet:py-8 px-4 tablet:px-10 gap-6 overflow-clip"
+    >
+      <div class="flex flex-row items-start w-full gap-5 tablet:gap-10">
+        <p class="text-xl font-semibold tablet:text-3xl font-neue text-nowrap">
+          Built with <br /> Pmfm.ai
+        </p>
+        <img
+          src={arrow}
+          alt="hand drawn arrow"
+          class="w-20 rotate-180 tablet:w-fit laptop:rotate-0 -scale-x-100 laptop:scale-x-100"
+        />
+      </div>
+      <img
+        src={buildWith}
+        alt="app screenshot"
+        class="bottom-0 laptop:scale-90 laptop:absolute laptop:top-8 rounded-medium laptop:-right-36 shadow-big"
+      />
+    </div>
   </section>
+
+  <div class=" h-[50px] tablet_landscape:h-[100px]"></div>
+
+  <!--! ========= FEATURES ========= -->
+  <section class="flex flex-col items-center w-full px-4 py-3 tablet:px-9">
+    <!--? -------- Title -------- -->
+    <div class="flex flex-col items-center w-full gap-4">
+      <h2
+        class="text-[calc(7vw)] tablet_landscape:text-5xl font-semibold text-center font-neue text-nowrap"
+      >
+        Everything you need to start <br />
+        <div
+          class="bg-[url('/src/assets/svg/gradient-bg-text.svg')] bg-no-repeat bg-contain bg-center w-min tablet_landscape:py-5 px-4 inline-block"
+        >
+          <span class="z-20 text-white">earning from AI</span>
+        </div>
+      </h2>
+      <p
+        class="text-lg text-center tablet:text-xl tablet_landscape:px-20 text-black/60"
+      >
+        Pmfm.ai comes with everything you need to create and launch your custom
+        AI chatbot app without code in minutes.
+      </p>
+    </div>
+    <!--? -------- Features -------- -->
+  </section>
+
+  <div class=" h-[50px] tablet_landscape:h-[100px]"></div>
 </main>

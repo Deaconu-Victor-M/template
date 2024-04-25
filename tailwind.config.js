@@ -34,6 +34,9 @@ export default {
         'big': '44px',
         'full': '9999px', //buttons
       },
+      boxShadow: {
+        'big': '51px 52px 112.8px -13px rgba(0, 0, 0, 0.31)',
+      },
       screens: {
         phone: "375px",
         // => @media (min-width: 375px) { ... }
