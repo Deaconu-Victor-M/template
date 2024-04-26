@@ -10,9 +10,9 @@
   import arrow from "/src/assets/svg/hand-drawn-arrow.svg";
 
   import paymentDashboard from "/src/assets/images/functionalities/payment-dashboard.png";
-  import appHosting from "/src/assets/images/functionalities/app-hosting.png";
+  import appHosting from "/src/assets/images/functionalities/app-hosting.jpeg";
   import design from "/src/assets/images/functionalities/design.png";
-  import analytics from "/src/assets/images/functionalities/analytics.png";
+  import analytics from "/src/assets/images/functionalities/analytics.jpeg";
   import llm from "/src/assets/images/functionalities/llm.png";
   import { onMount } from "svelte";
 
@@ -65,7 +65,9 @@
       >
     </nav>
   </header>
+
   <div class=" h-[50px] tablet_landscape:h-[100px]"></div>
+
   <!--! ========= HERO ========= -->
   <section
     class="flex flex-col items-center justify-between w-full h-full gap-12 px-4 py-3 tablet:px-9 laptop:items-end laptop:flex-row"
@@ -261,8 +263,7 @@
       </p>
     </div>
     <!--? -------- Features -------- -->
-    <div class="grid w-full grid-cols-2 gap-3 *:max-h-[360px]">
-      
+    <div class="grid w-full grid-cols-2 gap-3 *:laptop:max-h-[360px]">
       <!--? -------- Feature 1 -------- -->
       <div
         class="flex flex-col-reverse items-start justify-between w-full col-span-2 gap-6 px-4 py-4 laptop:items-end laptop:flex-row bg-grey-100 rounded-t-medium laptop:rounded-t-big laptop:rounded-b-regular rounded-b-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
@@ -271,7 +272,7 @@
           <h3
             class="text-2xl font-semibold tablet:text-4xl font-neue text-nowrap"
           >
-            Payment <br class="hidden tablet_landscape:block" />Dashboard
+            Payment <br class="hidden laptop:block" />Dashboard
           </h3>
           <p class="text-base text-black/60">
             You can link your bank account or debit card, and track all <br
@@ -288,29 +289,28 @@
 
       <!--? -------- Feature 2 -------- -->
       <div
-        class="flex flex-col-reverse items-end justify-between w-full col-span-1 px-4 py-4 rounded-bl-medium laptop:rounded-bl-big bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
+        class="flex flex-col-reverse items-end justify-between w-full col-span-2 gap-6 px-4 py-4 tablet_landscape:gap-0 tablet_landscape:col-span-1 rounded-bl-medium laptop:rounded-bl-big bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
       >
         <div class="flex flex-col gap-2 tablet:gap-4">
           <h3
             class="text-2xl font-semibold tablet:text-4xl font-neue text-nowrap"
           >
-            App <br
-              class="hidden desktop:block"
-            />Hosting
+            App <br class="hidden desktop:block" />Hosting
           </h3>
           <p class="text-base text-black/60">
-            Gain valuable insights about your customers and conversations using our analytics platform.
+            Gain valuable insights about your customers and conversations using
+            our analytics platform.
           </p>
         </div>
         <img
-          src={analytics}
+          src={appHosting}
           alt="app screenshot"
-          class=" laptop:top-8 rounded-regular laptop:-right-36 shadow-big max-w-[400px] border-[0.5px] self-end w-full -mb-10"
+          class=" laptop:top-8 rounded-regular laptop:-right-36 shadow-big max-w-[400px] border-[0.5px] self-end w-full tablet_landscape:-mb-7 -mr-20"
         />
       </div>
       <!--? -------- Feature 3 -------- -->
       <div
-        class="flex flex-col items-start justify-between w-full col-span-1 gap-6 px-4 py-4 bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
+        class="flex flex-col items-start justify-between w-full col-span-2 gap-6 px-4 py-4 tablet_landscape:col-span-1 bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
       >
         <div class="flex flex-col gap-2 tablet:gap-4">
           <h3
@@ -333,7 +333,7 @@
 
       <!--? -------- Feature 4 -------- -->
       <div
-        class="flex flex-col-reverse items-end justify-between w-full col-span-1 gap-6 px-4 py-4 rounded-bl-medium laptop:rounded-bl-big bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
+        class="flex flex-col-reverse items-end justify-between w-full col-span-2 gap-6 px-4 py-4 laptop:col-span-1 rounded-bl-medium laptop:rounded-bl-big bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
       >
         <div class="flex flex-col items-end gap-2 tablet:gap-4">
           <h3
@@ -342,7 +342,8 @@
             Analytics
           </h3>
           <p class="text-base text-end text-black/60">
-            Gain valuable insights about your customers and conversations using our analytics platform.
+            Gain valuable insights about your customers and conversations using
+            our analytics platform.
           </p>
         </div>
         <img
@@ -353,7 +354,7 @@
       </div>
       <!--? -------- Feature 5 -------- -->
       <div
-        class="flex flex-col-reverse items-start justify-between w-full col-span-1 px-4 py-4 rounded-brs-medium laptop:rounded-br-big bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
+        class="flex flex-col-reverse items-start justify-between w-full col-span-2 gap-6 px-4 py-4 laptop:col-span-1 rounded-b-medium laptop:rounded-br-big bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
       >
         <div class="flex flex-col gap-2 tablet:gap-4">
           <h3
@@ -370,11 +371,34 @@
         <img
           src={llm}
           alt="app screenshot"
-          class=" laptop:top-8 rounded-regular laptop:-right-36 shadow-big max-w-[450px] border-[0.5px] self-end w-full"
+          class=" laptop:top-8 rounded-regular laptop:-right-36 shadow-big max-w-[500px] border-[0.5px] self-end w-full"
         />
       </div>
     </div>
   </section>
 
   <div class=" h-[50px] tablet_landscape:h-[100px]"></div>
+
+    <section
+      class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+    >
+      <!--? -------- Title -------- -->
+      <div
+        class="flex flex-row items-center justify-between w-full gap-4"
+      >
+        <h2
+          class="text-3xl tablet:text-[calc(8vw)] tablet_landscape:text-5xl leading-none font-semibold font-neue text-nowrap"
+        >
+          Built with <br class="block laptop:hidden"/>Pmfm.ai
+        </h2>
+        <a
+          href="#signup"
+          class="px-7 py-3 pt-4 text-[calc(4vw)] font-medium leading-none text-white rounded-full tablet_landscape:text-2xl tablet_landscape:py-7 tablet_landscape:px-14 tablet_landscape:pt-8 font-neue bg-gradient-to-br from-primary-500 to-primary-400"
+          >Try for Yourself</a
+        >
+      </div>
+
+    </section>
+
+    <div class=" h-[50px] tablet_landscape:h-[100px]"></div>
 </main>
