@@ -1,10 +1,12 @@
 <script>
+  import Divider from "./lib/Divider.svelte";
   import profile1 from "/src/assets/images/profiles/profile1.webp";
   import profile2 from "/src/assets/images/profiles/profile2.webp";
   import profile3 from "/src/assets/images/profiles/profile3.webp";
   import profile4 from "/src/assets/images/profiles/profile4.avif";
 
   import buildWith from "/src/assets/images/apps/built-with-pmfmai.webp";
+  import logodalle from "/src/assets/images/apps/logodalle.png";
 
   import star from "./assets/svg/star.svg";
   import arrow from "/src/assets/svg/hand-drawn-arrow.svg";
@@ -14,6 +16,10 @@
   import design from "/src/assets/images/functionalities/design.png";
   import analytics from "/src/assets/images/functionalities/analytics.jpeg";
   import llm from "/src/assets/images/functionalities/llm.png";
+
+  import xLogo from "/src/assets/svg/logos/x-logo.svg";
+  import linkedinLogo from "/src/assets/svg/logos/linkedin-logo.svg";
+  import facebookLogo from "/src/assets/svg/logos/fb-logo.svg";
   import { onMount } from "svelte";
 
   let scrolled = false;
@@ -35,7 +41,7 @@
   <!--! ========= HEADER ========= -->
   <header
     class="sticky top-0 z-50 flex flex-row items-center justify-between w-full px-9 py-3 {scrolled
-      ? 'bg-white bg-opacity-90  backdrop-blur-lg'
+      ? 'bg-primary-50 bg-opacity-90  backdrop-blur-lg'
       : 'bg-transparent'}"
   >
     <a href="#hero" class="">
@@ -78,7 +84,7 @@
         class="text-[calc(9vw)] tablet_landscape:text-[calc(7vw)] laptop:text-[calc(5vw)] desktop:text-7xl font-semibold text-center leading-none font-neue laptop:text-start flex-nowrap text-nowrap"
       >
         <div
-          class="inline-block px-3 pt-1 mb-2 leading-none border rounded-full tablet:px-5 tablet_landscape:border-2 border-primary-500"
+          class="inline-block px-3 pt-2 mb-2 leading-none border rounded-full tablet:px-5 tablet_landscape:border-2 border-primary-500"
         >
           <span
             class="text-transparent bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
@@ -87,7 +93,7 @@
         </div>
         YOUR AI<br />
         <div
-          class="inline-block px-5 pt-1 leading-none rounded-full bg-gradient-to-br from-primary-500 to-primary-400"
+          class="inline-block px-5 pt-2 leading-none rounded-full bg-gradient-to-br from-primary-500 to-primary-400"
         >
           <span class="text-white">APP</span>
         </div>
@@ -237,7 +243,7 @@
     </div>
   </section>
 
-  <div class=" h-[50px] tablet_landscape:h-[100px]"></div>
+  <Divider />
 
   <!--! ========= FEATURES ========= -->
   <section
@@ -377,28 +383,251 @@
     </div>
   </section>
 
-  <div class=" h-[50px] tablet_landscape:h-[100px]"></div>
+  <Divider />
 
-    <section
-      class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+  <section
+    class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+  >
+    <!--? -------- Title -------- -->
+    <div class="flex flex-row items-center justify-between w-full gap-4">
+      <h2
+        class="text-2xl font-semibold leading-none tablet:text-3xl tablet_landscape:text-5xl font-neue text-nowrap"
+      >
+        Built with <br class="block laptop:hidden" />Pmfm.ai
+      </h2>
+      <a
+        href="#signup"
+        class="px-7 py-3 pt-4 text-[calc(4vw)] font-medium leading-none text-white rounded-full tablet_landscape:text-2xl tablet_landscape:py-7 tablet_landscape:px-14 tablet_landscape:pt-8 font-neue bg-gradient-to-br from-primary-500 to-primary-400"
+        >Try for Yourself</a
+      >
+    </div>
+    <div class=" h-[20px]"></div>
+    <!--? -------- Carrousel -> Left -------- -->
+    <div class="flex flex-row gap-15">
+      <!--? -------- App 1 -------- -->
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-row items-center justify-between gap-3 px-1">
+          <!--* ~~~~ Text ~~~~ -->
+          <div class="flex flex-col items-start">
+            <h3 class="text-3xl font-semibold font-neue">LogoDalle</h3>
+            <p class="text-xl text-black/60">logodalle.shop</p>
+          </div>
+          <!--* ~~~~ LinkButton ~~~~ -->
+          <div
+            class="flex items-center justify-center p-5 border-[1.5px] border-black rounded-full aspect-square size-min"
+          >
+            <svg
+              width="14"
+              height="13"
+              viewBox="0 0 14 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.5 12L12.5 1M12.5 1H1.5M12.5 1V12"
+                stroke="black"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+        </div>
+        <img
+          src={logodalle}
+          alt="app screenshot"
+          class="max-h-[300px] rounded-regular tablet_landscape:rounded-medium shadow-big"
+        />
+      </div>
+    </div>
+
+    <!--? -------- Carrousel -> Right -------- -->
+    <div></div>
+  </section>
+
+  <Divider />
+
+  <!--! ========= REVIEWS ========= -->
+  <section
+    class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+  >
+    <!--? -------- Title -------- -->
+    <div class="flex flex-row items-center justify-between w-full gap-4">
+      <h2
+        class="text-2xl font-semibold leading-none tablet:text-3xl tablet_landscape:text-5xl font-neue tablet:text-nowrap"
+      >
+        Hear what others <br class="hidden tablet:block" />have to say
+      </h2>
+      <p
+        class="text-2xl font-semibold leading-none tablet:text-3xl tablet_landscape:text-5xl font-neue text-nowrap"
+      >
+        <span
+          class="text-4xl font-extrabold leading-none text-transparent tablet:text-5xl tablet_landscape:text-7xl font-neue text-nowrap bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
+          >500+</span
+        > <br />creators
+      </p>
+    </div>
+  </section>
+
+  <Divider />
+
+  <!--! ========= FAQ ========= -->
+  <section
+    class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+  >
+    <!--? -------- Title -------- -->
+    <div class="flex flex-col items-center w-full tablet_landscape:gap-4">
+      <h2
+        class="text-2xl font-semibold leading-none tablet:text-3xl tablet_landscape:text-5xl font-neue tablet:text-nowrap"
+      >
+        FAQ
+      </h2>
+      <p
+        class="text-lg text-center tablet:text-xl tablet_landscape:px-20 text-black/60"
+      >
+        Frequently asked questions
+      </p>
+    </div>
+  </section>
+
+  <Divider />
+
+  <!--! ========= Email Me ========= -->
+  <section
+    class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+  >
+    <!--? -------- Title -------- -->
+    <div class="flex flex-col items-center w-full tablet_landscape:gap-4">
+      <h2
+        class="text-2xl font-semibold leading-none tablet:text-3xl tablet_landscape:text-5xl font-neue tablet:text-nowrap"
+      >
+        Still need help?
+      </h2>
+      <p
+        class="text-lg text-center tablet:text-xl tablet_landscape:px-20 text-black/60"
+      >
+        Message me at <br /><span
+          class="text-transparent underline decoration-primary-400 underline-offset-8 bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
+          >aditya@paymeformyai.com</span
+        >
+      </p>
+    </div>
+  </section>
+
+  <Divider />
+
+  <!--! ========= Pricing ========= -->
+  <section
+    class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+  >
+    <!--? -------- Title -------- -->
+    <div class="flex flex-col items-center w-full tablet_landscape:gap-4">
+      <h2
+        class="text-2xl font-semibold leading-none tablet:text-3xl tablet_landscape:text-5xl font-neue tablet:text-nowrap"
+      >
+        Pricing
+      </h2>
+      <p
+        class="text-lg text-center tablet:text-xl tablet_landscape:px-20 text-black/60"
+      >
+        Try our product for <b>free</b> for <br /><span
+          class="font-bold text-transparent bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
+          >30 days</span
+        >
+      </p>
+    </div>
+  </section>
+
+  <Divider />
+
+  <!--! ========= CTA Sign Up ========= -->
+
+  <section
+    class="flex flex-col items-center w-full px-4 laptop:gap-16 tablet:px-9"
+  >
+    <div
+      class="flex flex-col items-center w-full gap-10 px-4 py-28 laptop:gap-16 tablet:px-9 rounded-big bg-gradient-to-br from-primary-500 to-primary-400"
     >
       <!--? -------- Title -------- -->
-      <div
-        class="flex flex-row items-center justify-between w-full gap-4"
-      >
+      <div class="flex flex-col items-center w-full gap-4">
         <h2
-          class="text-3xl tablet:text-[calc(8vw)] tablet_landscape:text-5xl leading-none font-semibold font-neue text-nowrap"
+          class="text-2xl font-semibold leading-none text-center text-white tablet:text-3xl tablet_landscape:text-5xl font-neue tablet:text-nowrap"
         >
-          Built with <br class="block laptop:hidden"/>Pmfm.ai
+          Build your next AI SaaS
         </h2>
-        <a
-          href="#signup"
-          class="px-7 py-3 pt-4 text-[calc(4vw)] font-medium leading-none text-white rounded-full tablet_landscape:text-2xl tablet_landscape:py-7 tablet_landscape:px-14 tablet_landscape:pt-8 font-neue bg-gradient-to-br from-primary-500 to-primary-400"
-          >Try for Yourself</a
+        <p
+          class="text-lg leading-tight text-center tablet:text-xl tablet_landscape:px-20 text-white/60"
         >
+          Use Pmfm.ai as your complete stack for your next AI business
+        </p>
       </div>
+      <a
+        href="#signup"
+        class="px-16 py-5 pt-6 text-lg leading-none bg-white rounded-full tablet_landscape:block tablet_landscape:py-7 tablet_landscape:px-14 tablet_landscape:pt-8"
+      >
+        <span
+          class="text-2xl font-semibold text-transparent tablet:text-3xl font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
+        >
+          Sign Up
+        </span></a
+      >
+    </div>
+  </section>
 
-    </section>
+  <Divider />
 
-    <div class=" h-[50px] tablet_landscape:h-[100px]"></div>
+  <!--! ========= FOOTER ========= -->
+
+  <footer class="flex flex-col w-full px-4 py-6 tablet:px-9 gap-28">
+    <div class="flex flex-col justify-between gap-20 laptop:flex-row">
+      <div class="flex flex-col items-start">
+        <a
+          href="#hero"
+          class="text-2xl font-bold text-transparent tablet:text-3xl tablet_landscape:text-5xl text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
+          >Pmfm.ai</a
+        >
+        <p
+          class="text-lg leading-tight text-start tablet:text-xl text-black/60 tablet:text-nowrap"
+        >
+          Pmfm.ai enables creators to launch and monetize <br class="hidden tablet:block" /> their custom AI
+          apps without code.
+        </p>
+        <!--? -------- Socials -------- -->
+        <div class="flex flex-row mt-4">
+          <a href="#x_account" class="p-2 mr-4 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small ">
+            <img src={xLogo} alt="x-logo" />
+          </a>
+          <a href="#linkedin_account" class="p-2 mr-4 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small">
+            <img src={linkedinLogo} alt="linkedin-logo" />
+          </a>
+          <a href="#fb_account" class="p-2 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small" >
+            <img src={facebookLogo} alt="facebook-logo" />
+          </a>
+        </div>
+      </div>
+      <div class="grid items-start justify-start w-full grid-cols-3 gap-6 tablet:justify-between tablet_landscape:w-3/4 laptop:w-1/2">
+        <div class="flex flex-col col-span-2 gap-3 tablet:col-span-1">
+          <h3 class="text-xl font-semibold text-transparent text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text">Company</h3>
+          <a href="#features" class="text-lg text-black/60">Blog</a>
+          <a href="#pricing" class="text-lg text-black/60">Reddit</a>
+          <a href="#faq" class="text-lg text-black/60">Affiliates</a>
+        </div>
+        <div class="flex flex-col col-span-1 gap-3">
+          <h3 class="text-xl font-semibold text-transparent text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text">Product</h3>
+          <a href="#features" class="text-lg text-black/60">Github</a>
+          <a href="#pricing" class="text-lg text-black/60">FAQs</a>
+          <a href="#faq" class="text-lg text-black/60">Pricing</a>
+        </div>
+        <div class="flex flex-col col-span-2 gap-3 tablet:col-span-1 *:text-nowrap">
+          <h3 class="text-xl font-semibold text-transparent text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text">Resources</h3>
+          <a href="#features" class="text-lg text-black/60">Discord Support</a>
+          <a href="#pricing" class="text-lg text-black/60">Public Roadmap</a>
+          <a href="#faq" class="text-lg text-black/60">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center">
+      Copyright © 2024 RentParcel Technologies Inc. All rights reserved. <br />
+
+      <a href="#da" class="underline text-bold">Terms</a> ・ <a href="#da" class="underline text-bold">Privacy</a>
+    </p>
+  </footer>
 </main>
