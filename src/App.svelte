@@ -8,6 +8,12 @@
 
   import star from "./assets/svg/star.svg";
   import arrow from "/src/assets/svg/hand-drawn-arrow.svg";
+
+  import paymentDashboard from "/src/assets/images/functionalities/payment-dashboard.png";
+  import appHosting from "/src/assets/images/functionalities/app-hosting.png";
+  import design from "/src/assets/images/functionalities/design.png";
+  import analytics from "/src/assets/images/functionalities/analytics.png";
+  import llm from "/src/assets/images/functionalities/llm.png";
   import { onMount } from "svelte";
 
   let scrolled = false;
@@ -209,7 +215,7 @@
     </div>
     <!--? ========= Illustration ========= -->
     <div
-      class="w-full tablet:max-w-[500px] laptop:aspect-square bg-grey-100 rounded-medium tablet:rounded-big relative flex flex-col laptop:justify-end justify-start laptop:items-end py-4 tablet:py-8 px-4 tablet:px-10 gap-6 overflow-clip"
+      class="w-full tablet:max-w-[500px] laptop:aspect-square bg-grey-100 rounded-medium laptop:rounded-big relative flex flex-col laptop:justify-end justify-start laptop:items-end py-4 tablet_landscape:py-8 px-4 tablet_landscape:px-10 gap-6 overflow-clip"
     >
       <div class="flex flex-row items-start w-full gap-5 tablet:gap-10">
         <p class="text-xl font-semibold tablet:text-3xl font-neue text-nowrap">
@@ -224,7 +230,7 @@
       <img
         src={buildWith}
         alt="app screenshot"
-        class="bottom-0 laptop:scale-90 laptop:absolute laptop:top-8 rounded-medium laptop:-right-36 shadow-big"
+        class="bottom-0 laptop:scale-90 laptop:absolute laptop:top-8 rounded-regular tablet_landscape:rounded-medium laptop:-right-36 shadow-big"
       />
     </div>
   </section>
@@ -232,7 +238,9 @@
   <div class=" h-[50px] tablet_landscape:h-[100px]"></div>
 
   <!--! ========= FEATURES ========= -->
-  <section class="flex flex-col items-center w-full px-4 py-3 tablet:px-9">
+  <section
+    class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+  >
     <!--? -------- Title -------- -->
     <div class="flex flex-col items-center w-full gap-4">
       <h2
@@ -240,9 +248,9 @@
       >
         Everything you need to start <br />
         <div
-          class="bg-[url('/src/assets/svg/gradient-bg-text.svg')] bg-no-repeat bg-contain bg-center w-min tablet_landscape:py-5 px-4 inline-block"
+          class="bg-[url('/src/assets/svg/gradient-bg-text.svg')] bg-no-repeat bg-center bg-contain w-min tablet_landscape:py-6 px-4 inline-block"
         >
-          <span class="z-20 text-white">earning from AI</span>
+          <span class="text-white">earning from AI</span>
         </div>
       </h2>
       <p
@@ -253,6 +261,119 @@
       </p>
     </div>
     <!--? -------- Features -------- -->
+    <div class="grid w-full grid-cols-2 gap-3 *:max-h-[360px]">
+      
+      <!--? -------- Feature 1 -------- -->
+      <div
+        class="flex flex-col-reverse items-start justify-between w-full col-span-2 gap-6 px-4 py-4 laptop:items-end laptop:flex-row bg-grey-100 rounded-t-medium laptop:rounded-t-big laptop:rounded-b-regular rounded-b-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
+      >
+        <div class="flex flex-col gap-2 tablet:gap-4">
+          <h3
+            class="text-2xl font-semibold tablet:text-4xl font-neue text-nowrap"
+          >
+            Payment <br class="hidden tablet_landscape:block" />Dashboard
+          </h3>
+          <p class="text-base text-black/60">
+            You can link your bank account or debit card, and track all <br
+              class="hidden desktop:block"
+            />your earnings in one place with Stripe.
+          </p>
+        </div>
+        <img
+          src={paymentDashboard}
+          alt="app screenshot"
+          class=" laptop:scale-90 laptop:top-8 rounded-regular laptop:-right-36 shadow-big max-w-[549px] border-[0.5px] self-end w-full"
+        />
+      </div>
+
+      <!--? -------- Feature 2 -------- -->
+      <div
+        class="flex flex-col-reverse items-end justify-between w-full col-span-1 px-4 py-4 rounded-bl-medium laptop:rounded-bl-big bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
+      >
+        <div class="flex flex-col gap-2 tablet:gap-4">
+          <h3
+            class="text-2xl font-semibold tablet:text-4xl font-neue text-nowrap"
+          >
+            App <br
+              class="hidden desktop:block"
+            />Hosting
+          </h3>
+          <p class="text-base text-black/60">
+            Gain valuable insights about your customers and conversations using our analytics platform.
+          </p>
+        </div>
+        <img
+          src={analytics}
+          alt="app screenshot"
+          class=" laptop:top-8 rounded-regular laptop:-right-36 shadow-big max-w-[400px] border-[0.5px] self-end w-full -mb-10"
+        />
+      </div>
+      <!--? -------- Feature 3 -------- -->
+      <div
+        class="flex flex-col items-start justify-between w-full col-span-1 gap-6 px-4 py-4 bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
+      >
+        <div class="flex flex-col gap-2 tablet:gap-4">
+          <h3
+            class="text-2xl font-semibold tablet:text-4xl font-neue text-nowrap"
+          >
+            Design
+          </h3>
+          <p class="text-base text-black/60">
+            Use our collection of open-sourced themes <br
+              class="hidden desktop:block"
+            />to build your AI app.
+          </p>
+        </div>
+        <img
+          src={design}
+          alt="app screenshot"
+          class=" laptop:top-8 rounded-regular laptop:-right-36 shadow-big max-w-[549px] border-[0.5px] self-end w-full"
+        />
+      </div>
+
+      <!--? -------- Feature 4 -------- -->
+      <div
+        class="flex flex-col-reverse items-end justify-between w-full col-span-1 gap-6 px-4 py-4 rounded-bl-medium laptop:rounded-bl-big bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
+      >
+        <div class="flex flex-col items-end gap-2 tablet:gap-4">
+          <h3
+            class="text-2xl font-semibold tablet:text-4xl font-neue text-nowrap"
+          >
+            Analytics
+          </h3>
+          <p class="text-base text-end text-black/60">
+            Gain valuable insights about your customers and conversations using our analytics platform.
+          </p>
+        </div>
+        <img
+          src={analytics}
+          alt="app screenshot"
+          class=" laptop:top-8 rounded-regular laptop:-right-36 shadow-big max-w-[400px] border-[0.5px] self-start w-full"
+        />
+      </div>
+      <!--? -------- Feature 5 -------- -->
+      <div
+        class="flex flex-col-reverse items-start justify-between w-full col-span-1 px-4 py-4 rounded-brs-medium laptop:rounded-br-big bg-grey-100 laptop:rounded-regular rounded-small tablet_landscape:py-8 tablet_landscape:px-10 overflow-clip"
+      >
+        <div class="flex flex-col gap-2 tablet:gap-4">
+          <h3
+            class="text-2xl font-semibold tablet:text-4xl font-neue text-nowrap"
+          >
+            LLMs
+          </h3>
+          <p class="text-base text-black/60">
+            Use different models from OpenAI, Anthropic, etc. <br
+              class="hidden desktop:block"
+            />to build your apps.
+          </p>
+        </div>
+        <img
+          src={llm}
+          alt="app screenshot"
+          class=" laptop:top-8 rounded-regular laptop:-right-36 shadow-big max-w-[450px] border-[0.5px] self-end w-full"
+        />
+      </div>
+    </div>
   </section>
 
   <div class=" h-[50px] tablet_landscape:h-[100px]"></div>

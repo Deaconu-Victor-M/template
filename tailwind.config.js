@@ -28,7 +28,7 @@ export default {
         },
       },
       borderRadius: {
-        'small': '6px',
+        'small': '8px',
         'regular': '12px',
         'medium': '22px',
         'big': '44px',
@@ -36,6 +36,7 @@ export default {
       },
       boxShadow: {
         'big': '51px 52px 112.8px -13px rgba(0, 0, 0, 0.31)',
+        'inner': '0px 0px 74.2px 30px rgba(0, 0, 0, 0.03) inset'
       },
       screens: {
         phone: "375px",
