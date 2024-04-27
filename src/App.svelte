@@ -540,7 +540,7 @@
       </p>
     </div>
     <!--? -------- Pricing Cards -------- -->
-    <div class="grid justify-center w-full grid-cols-1 gap-8 tablet_landscape:grid-cols-2 laptop:grid-cols-3">
+    <div class="grid w-full grid-cols-1 gap-4 mx-auto tablet_landscape:w-auto place-content-stretch tablet_landscape:grid-cols-2 laptop:grid-cols-3">
       <!--* ~~~~ Free Tier ~~~~ -->
       <FreeCard/>
       <!--* ~~~~ Pro Tier ~~~~ -->

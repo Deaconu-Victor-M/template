@@ -1,6 +1,9 @@
 <div
-  class="flex col-span-1  flex-col items-start justify-between w-full h-auto gap-5 p-4 border-2 rounded-regular border-primary-400 tablet_landscape:max-w-[380px]"
+  class="flex col-span-1 relative flex-col items-start justify-between w-full h-auto gap-5 p-4 border-2 rounded-regular border-primary-400 tablet_landscape:max-w-[380px]"
 >
+    <div class="absolute -top-[15px] left-0 right-0 py-1 mx-auto text-sm font-light text-white rounded-full text-nowrap w-min px-7 bg-gradient-to-br from-primary-500 to-primary-400">
+        Best Value
+    </div>
   <div class="flex flex-col items-start gap-6">
     <div class="flex flex-col items-start gap-2">
       <div class="flex flex-row gap-3 mb-2">

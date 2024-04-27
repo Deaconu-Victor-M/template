@@ -1,5 +1,5 @@
 <div
-  class="flex col-span-1 flex-col items-start justify-between w-full h-auto gap-5 p-4 rounded-regular  laptop:max-w-[380px]"
+  class="flex col-span-1 flex-col items-start justify-between w-full h-auto gap-5 p-4 rounded-regular laptop:max-w-[380px]"
 >
   <div class="flex flex-col items-start gap-6">
     <div class="flex flex-col items-start gap-2">
