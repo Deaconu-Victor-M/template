@@ -1,5 +1,10 @@
 <script>
   import Divider from "./lib/Divider.svelte";
+  import FreeCard from "./lib/pricingCards/FreeCard.svelte";
+  import ProCard from "./lib/pricingCards/ProCard.svelte";
+  import ProPlusCard from "./lib/pricingCards/ProPlusCard.svelte";
+
+
   import profile1 from "/src/assets/images/profiles/profile1.webp";
   import profile2 from "/src/assets/images/profiles/profile2.webp";
   import profile3 from "/src/assets/images/profiles/profile3.webp";
@@ -534,6 +539,15 @@
         >
       </p>
     </div>
+    <!--? -------- Pricing Cards -------- -->
+    <div class="grid justify-center w-full grid-cols-1 gap-8 tablet_landscape:grid-cols-2 laptop:grid-cols-3">
+      <!--* ~~~~ Free Tier ~~~~ -->
+      <FreeCard/>
+      <!--* ~~~~ Pro Tier ~~~~ -->
+      <ProCard/>
+      <!--* ~~~~ Pro Plus Tier ~~~~ -->
+      <ProPlusCard/>
+    </div>
   </section>
 
   <Divider />
@@ -544,7 +558,7 @@
     class="flex flex-col items-center w-full px-4 laptop:gap-16 tablet:px-9"
   >
     <div
-      class="flex flex-col items-center w-full gap-10 px-4 py-28 laptop:gap-16 tablet:px-9 rounded-big bg-gradient-to-br from-primary-500 to-primary-400"
+      class="flex flex-col items-center w-full gap-10 px-4 py-28 laptop:gap-16 tablet:px-9 rounded-medium laptop:rounded-big bg-gradient-to-br from-primary-500 to-primary-400"
     >
       <!--? -------- Title -------- -->
       <div class="flex flex-col items-center w-full gap-4">
@@ -587,37 +601,61 @@
         <p
           class="text-lg leading-tight text-start tablet:text-xl text-black/60 tablet:text-nowrap"
         >
-          Pmfm.ai enables creators to launch and monetize <br class="hidden tablet:block" /> their custom AI
-          apps without code.
+          Pmfm.ai enables creators to launch and monetize <br
+            class="hidden tablet:block"
+          /> their custom AI apps without code.
         </p>
         <!--? -------- Socials -------- -->
         <div class="flex flex-row mt-4">
-          <a href="#x_account" class="p-2 mr-4 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small ">
+          <a
+            href="#x_account"
+            class="p-2 mr-4 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small"
+          >
             <img src={xLogo} alt="x-logo" />
           </a>
-          <a href="#linkedin_account" class="p-2 mr-4 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small">
+          <a
+            href="#linkedin_account"
+            class="p-2 mr-4 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small"
+          >
             <img src={linkedinLogo} alt="linkedin-logo" />
           </a>
-          <a href="#fb_account" class="p-2 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small" >
+          <a
+            href="#fb_account"
+            class="p-2 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small"
+          >
             <img src={facebookLogo} alt="facebook-logo" />
           </a>
         </div>
       </div>
-      <div class="grid items-start justify-start w-full grid-cols-3 gap-6 tablet:justify-between tablet_landscape:w-3/4 laptop:w-1/2">
-        <div class="flex flex-col col-span-2 gap-3 tablet:col-span-1">
-          <h3 class="text-xl font-semibold text-transparent text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text">Company</h3>
+      <div
+        class="grid items-start justify-start w-full grid-cols-2 gap-12 tablet:grid-cols-3 tablet:gap-6 tablet:justify-between tablet_landscape:w-3/4 laptop:w-1/2"
+      >
+        <div class="flex flex-col gap-3 tablet:">
+          <h3
+            class="text-xl font-semibold text-transparent text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
+          >
+            Company
+          </h3>
           <a href="#features" class="text-lg text-black/60">Blog</a>
           <a href="#pricing" class="text-lg text-black/60">Reddit</a>
           <a href="#faq" class="text-lg text-black/60">Affiliates</a>
         </div>
         <div class="flex flex-col col-span-1 gap-3">
-          <h3 class="text-xl font-semibold text-transparent text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text">Product</h3>
+          <h3
+            class="text-xl font-semibold text-transparent text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
+          >
+            Product
+          </h3>
           <a href="#features" class="text-lg text-black/60">Github</a>
           <a href="#pricing" class="text-lg text-black/60">FAQs</a>
           <a href="#faq" class="text-lg text-black/60">Pricing</a>
         </div>
-        <div class="flex flex-col col-span-2 gap-3 tablet:col-span-1 *:text-nowrap">
-          <h3 class="text-xl font-semibold text-transparent text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text">Resources</h3>
+        <div class="flex flex-col gap-3 col-span-1 *:text-nowrap">
+          <h3
+            class="text-xl font-semibold text-transparent text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
+          >
+            Resources
+          </h3>
           <a href="#features" class="text-lg text-black/60">Discord Support</a>
           <a href="#pricing" class="text-lg text-black/60">Public Roadmap</a>
           <a href="#faq" class="text-lg text-black/60">YouTube</a>
@@ -627,7 +665,8 @@
     <p class="text-center">
       Copyright © 2024 RentParcel Technologies Inc. All rights reserved. <br />
 
-      <a href="#da" class="underline text-bold">Terms</a> ・ <a href="#da" class="underline text-bold">Privacy</a>
+      <a href="#da" class="underline text-bold">Terms</a> ・
+      <a href="#da" class="underline text-bold">Privacy</a>
     </p>
   </footer>
 </main>

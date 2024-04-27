@@ -20,7 +20,7 @@ export default {
       colors: {
         primary: {
           50: '#FFFCFB', // Background
-          400: '#F55C30',
+          400: '#EC5830',
           500: '#F04941',
         },
         grey: {
