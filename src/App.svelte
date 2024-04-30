@@ -5,6 +5,9 @@
   import ProCard from "./lib/pricingCards/ProCard.svelte";
   import ProPlusCard from "./lib/pricingCards/ProPlusCard.svelte";
 
+  import TextReview from "./lib/TextReview.svelte";
+  import VideoReview from "./lib/VideoReview.svelte";
+
   import profile1 from "/src/assets/images/profiles/profile1.webp";
   import profile2 from "/src/assets/images/profiles/profile2.webp";
   import profile3 from "/src/assets/images/profiles/profile3.webp";
@@ -470,34 +473,54 @@
         > <br />creators
       </p>
     </div>
-    <div class="grid w-full gap-10 grid-col-1 tablet_landscape:grid-cols-2 laptop:grid-cols-3">
-      <div class="flex flex-col gap-4">
-        <div class="flex flex-row items-center justify-start gap-5">
-          <img
-            src={profile3}
-            alt="Ali"
-            class="inline-block border-2 rounded-full pointer-events-none w-14 h-14 aspect-square border-primary-50"
-          />
-          <div class="flex flex-col items-start">
-            <h3 class="text-2xl font-semibold leading-none font-neue">Ben</h3>
-            <p class="text-lg text-black/60">Founder, Logodalle</p>
-          </div>
-        </div>
-        <div class="flex flex-row gap-1">
-          <img src={star} alt="star" />
-          <img src={star} alt="star" />
-          <img src={star} alt="star" />
-          <img src={star} alt="star" />
-          <img src={star} alt="star" />
-        </div>
-        <p class="text-lg text-black/60">
-          Aditya has created an amazing platform for chatbot and saas creators.
-          I use pmfm.ai to host chatbots on my own subdomains and would highly
-          recommend it. Initial setup was easy and the built-in analytics have
-          helped me fine-tune my products. Great discord server filled with
-          other builders in the space as well.
-        </p>
-      </div>
+    <!--? ======== Reviews ======== -->
+    <div
+      class="w-full gap-10 columns-1 tablet_landscape:columns-2 laptop:columns-3 desktop:gap-20 *:my-8"
+    >
+      <!--? -------- Review Text -------- -->
+      <TextReview
+        profile={profile1}
+        name="Darren Coxion"
+        title="Founder Coxion AI"
+        review="Thus far been hugely impressed with what Pay Me For My AI offer. I've used their bots with ease inside my CourseBots revision guides and they are a huge value add. I like how I can add them to a subdomain of my website. Really helpful. Keep up the good work!"
+      />
+      <!--? -------- Review Text -------- -->
+      <TextReview
+        profile={profile2}
+        name="Darren Coxion"
+        title="Founder Coxion AI"
+        review="Thus far been hugely impressed with what Pay Me For My AI offer. I've used their bots with ease inside my CourseBots revision guides and they are a huge value add. I like how I can add them to a subdomain of my website. Really helpful. Keep up the good work!"
+      />
+      <!--? -------- Review Text -------- -->
+      <TextReview
+        profile={profile4}
+        name="Braxom"
+        title="Founder"
+        review="No cap - the most accommodating and helpful support I've had with a vendor EVER. Would give 6 stars"
+      />
+
+      <!--? -------- Review Video -------- -->
+      <VideoReview
+        thumbnail="/src/assets/images/Thumbnail.webp"
+        name="Vinita Temmert"
+        title="AI App Creator"
+        review="We had the idea up and running within days and the first person who tried it instantly said how can I pay you! And they invested $97 straight away. Idea to payment just like that!"
+      />
+      <!--? -------- Review Text -------- -->
+      <TextReview
+        profile={profile3}
+        name="Ben"
+        title="Founder, Logodalle"
+        review="Aditya has created an amazing platform for chatbot and saas creators. I use pmfm.ai to host chatbots on my own subdomains and would highly recommend it. Initial setup was easy and the built-in analytics have helped me fine-tune my products. Great discord server filled with other builders in the space as well."
+      />
+      <!--? -------- Review Text -------- -->
+      <TextReview
+        profile={profile4}
+        name="Ben"
+        title="Founder, Logodalle"
+        review="Aditya has created an amazing platform for chatbot and saas creators. I use pmfm.ai to host chatbots on my own subdomains and would highly recommend it. Initial setup was easy and the built-in analytics have helped me fine-tune my products. Great discord server filled with other builders in the space as well."
+      />
+      
     </div>
   </section>
 
@@ -524,15 +547,42 @@
       class="flex flex-col items-center justify-center w-full transition-all"
     >
       <!--? -------- Questions -------- -->
-      <QuestionCard question='How can I create my AI app on Pmfm.ai?' answer='You will need to <a href="#login" class="font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500">login</a> and then click on the "Create App" button. A form will then open up where you can provide your app details. If you plan to monetize, you will need to connect your bank account or debit card with Stripe. Here is a <a href="https://www.youtube.com/watch?v=sslaqOvOM84&ab_channel=Pmfm_ai" target="_blank" class="font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500">video</a> that explains the entire process step-by-step.'/>
-      <QuestionCard question='Can I use my own website or subdomain?' answer="Absolutely! You can publish your app to your website or subdomain by making a simple DNS change. Once you've launched your app, you will see this option available in your dashboard."/>
-      <QuestionCard question='What models can I use to build my AI app on Pmfm.ai?' answer='We support AI models from OpenAI, Anthropic, Meta, Mistral, and Stability AI.'/>
-      <QuestionCard question='Do I need an API Key?' answer="No, you don't need any API Key to build your app. We take care of all the API expenses so all you have to do is focus on your Pmfm.ai apps 😇"/>
-      <QuestionCard question='Can I embed the AI app on my own website?' answer='Yes, once you have created your app, you will see an option for embedding it to your own website on the dashboard. Embedding has certain limitations which is why we recommend using subdomains instead.'/>
-      <QuestionCard question='Can I use my OpenAI Assistant for building the app?' answer='Yes, you can use your OpenAI assistant id to create your app. However, you will need to provide your OpenAI API key to make it work.'/>
-      <QuestionCard question='Where can I see the payments received for my product?' answer='To access your connected Stripe account for payments, please <a href="#login" class="font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500">login</a> to Pmfm.ai. From your dashboard, please click on the top right drop down menu with your name. You will find an option called "Stripe Access". Clicking on this will redirect you to your connected Stripe account.'/>
-      <QuestionCard question='How do I access analytics and customer data for my app?' answer="App analytics can be viewed by clicking on the 'Analytics' button available once the app is live. Basic analytics like views, messages, payments, last message and customer are available for free. If you'd like to view all the customer and conversation data, you'll need to subscribe to the basic plan for <b>$15/mo</b> or the pro plan for <b>$35/mo</b>."/>
-      <QuestionCard question='How can I contact support?' answer='If you need help with Pmfm.ai or have any other questions, you can chat with us by clicking on the bottom-right widget, or submit a support ticket through the <a href="https://discord.com/invite/FnktGy3mkV" target="_blank" class="font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500">discord</a>, or reach out to us at support@paymeformyai.com'/>
+      <QuestionCard
+        question="How can I create my AI app on Pmfm.ai?"
+        answer="You will need to <a href='#login' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>login</a> and then click on the 'Create App' button. A form will then open up where you can provide your app details. If you plan to monetize, you will need to connect your bank account or debit card with Stripe. Here is a <a href='https://www.youtube.com/watch?v=sslaqOvOM84&ab_channel=Pmfm_ai' target='_blank' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>video</a> that explains the entire process step-by-step."
+      />
+      <QuestionCard
+        question="Can I use my own website or subdomain?"
+        answer="Absolutely! You can publish your app to your website or subdomain by making a simple DNS change. Once you've launched your app, you will see this option available in your dashboard."
+      />
+      <QuestionCard
+        question="What models can I use to build my AI app on Pmfm.ai?"
+        answer="We support AI models from OpenAI, Anthropic, Meta, Mistral, and Stability AI."
+      />
+      <QuestionCard
+        question="Do I need an API Key?"
+        answer="No, you don't need any API Key to build your app. We take care of all the API expenses so all you have to do is focus on your Pmfm.ai apps 😇"
+      />
+      <QuestionCard
+        question="Can I embed the AI app on my own website?"
+        answer="Yes, once you have created your app, you will see an option for embedding it to your own website on the dashboard. Embedding has certain limitations which is why we recommend using subdomains instead."
+      />
+      <QuestionCard
+        question="Can I use my OpenAI Assistant for building the app?"
+        answer="Yes, you can use your OpenAI assistant id to create your app. However, you will need to provide your OpenAI API key to make it work."
+      />
+      <QuestionCard
+        question="Where can I see the payments received for my product?"
+        answer="To access your connected Stripe account for payments, please <a href='#login' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>login</a> to Pmfm.ai. From your dashboard, please click on the top right drop down menu with your name. You will find an option called 'Stripe Access'. Clicking on this will redirect you to your connected Stripe account."
+      />
+      <QuestionCard
+        question="How do I access analytics and customer data for my app?"
+        answer="App analytics can be viewed by clicking on the 'Analytics' button available once the app is live. Basic analytics like views, messages, payments, last message and customer are available for free. If you'd like to view all the customer and conversation data, you'll need to subscribe to the basic plan for <b>$15/mo</b> or the pro plan for <b>$35/mo</b>."
+      />
+      <QuestionCard
+        question="How can I contact support?"
+        answer="If you need help with Pmfm.ai or have any other questions, you can chat with us by clicking on the bottom-right widget, or submit a support ticket through the <a href='https://discord.com/invite/FnktGy3mkV' target='_blank' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>discord</a>, or reach out to us at support@paymeformyai.com"
+      />
     </div>
   </section>
 
