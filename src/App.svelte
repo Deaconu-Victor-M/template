@@ -8,13 +8,14 @@
   import TextReview from "./lib/TextReview.svelte";
   import VideoReview from "./lib/VideoReview.svelte";
 
+  import Carousel from "./lib/Carousel.svelte";
+
   import profile1 from "/src/assets/images/profiles/profile1.webp";
   import profile2 from "/src/assets/images/profiles/profile2.webp";
   import profile3 from "/src/assets/images/profiles/profile3.webp";
   import profile4 from "/src/assets/images/profiles/profile4.avif";
 
   import buildWith from "/src/assets/images/apps/built-with-pmfmai.webp";
-  import logodalle from "/src/assets/images/apps/logodalle.png";
 
   import star from "./assets/svg/star.svg";
   import arrow from "/src/assets/svg/hand-drawn-arrow.svg";
@@ -29,9 +30,11 @@
   import linkedinLogo from "/src/assets/svg/logos/linkedin-logo.svg";
   import facebookLogo from "/src/assets/svg/logos/fb-logo.svg";
   import { onMount } from "svelte";
+  
 
   let scrolled = false;
 
+  // Trigger the scroll event for the header
   onMount(() => {
     const handleScroll = () => {
       scrolled = window.scrollY > 0;
@@ -43,9 +46,13 @@
       window.removeEventListener("scroll", handleScroll);
     };
   });
+
+
+
+
 </script>
 
-<main class="bg-primary-50 *:max-w-screen flex flex-col items-center">
+<main class="bg-primary-50 *:max-w-screen flex flex-col items-center overflow-x-hidden">
   <!--! ========= HEADER ========= -->
   <header
     class="sticky top-0 z-50 flex flex-row items-center justify-between w-full px-9 py-3 {scrolled
@@ -394,7 +401,7 @@
   <Divider />
 
   <section
-    class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+    class="flex flex-col items-center w-full gap-10 px-4 laptop:gap-16 tablet:px-9"
   >
     <!--? -------- Title -------- -->
     <div class="flex flex-row items-center justify-between w-full gap-4">
@@ -409,53 +416,14 @@
         >Try for Yourself</a
       >
     </div>
-    <div class=" h-[20px]"></div>
-    <!--? -------- Carrousel -> Left -------- -->
-    <div class="flex flex-row gap-15">
-      <!--? -------- App 1 -------- -->
-      <div class="flex flex-col gap-4">
-        <div class="flex flex-row items-center justify-between gap-3 px-1">
-          <!--* ~~~~ Text ~~~~ -->
-          <div class="flex flex-col items-start">
-            <h3 class="text-3xl font-semibold font-neue">LogoDalle</h3>
-            <p class="text-xl text-black/60">logodalle.shop</p>
-          </div>
-          <!--* ~~~~ LinkButton ~~~~ -->
-          <div
-            class="flex items-center justify-center p-5 border-[1.5px] border-black rounded-full aspect-square size-min"
-          >
-            <svg
-              width="14"
-              height="13"
-              viewBox="0 0 14 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.5 12L12.5 1M12.5 1H1.5M12.5 1V12"
-                stroke="black"
-                stroke-width="1.5"
-              />
-            </svg>
-          </div>
-        </div>
-        <img
-          src={logodalle}
-          alt="app screenshot"
-          class="max-h-[300px] rounded-regular tablet_landscape:rounded-medium shadow-big"
-        />
-      </div>
-    </div>
-
-    <!--? -------- Carrousel -> Right -------- -->
-    <div></div>
+    <Carousel/>
   </section>
 
   <Divider />
 
   <!--! ========= REVIEWS ========= -->
   <section
-    class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+    class="flex flex-col items-center w-full gap-10 px-4 laptop:gap-16 tablet:px-9"
   >
     <!--? -------- Title -------- -->
     <div class="flex flex-row items-center justify-between w-full gap-4">
@@ -520,7 +488,6 @@
         title="Founder, Logodalle"
         review="Aditya has created an amazing platform for chatbot and saas creators. I use pmfm.ai to host chatbots on my own subdomains and would highly recommend it. Initial setup was easy and the built-in analytics have helped me fine-tune my products. Great discord server filled with other builders in the space as well."
       />
-      
     </div>
   </section>
 
