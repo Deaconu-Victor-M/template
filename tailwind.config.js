@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
+const plugin = require('tailwindcss/plugin')
 
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -20,7 +21,7 @@ export default {
       colors: {
         primary: {
           50: '#FFFCFB', // Background
-          400: '#EC5830',
+          400: '#F66137',
           500: '#F04941',
         },
         grey: {
@@ -36,7 +37,9 @@ export default {
       },
       boxShadow: {
         'big': '51px 52px 112.8px -13px rgba(0, 0, 0, 0.31)',
-        'inner': '0px 0px 74.2px 30px rgba(0, 0, 0, 0.03) inset'
+        'inner': '0px 0px 74.2px 30px rgba(0, 0, 0, 0.03) inset',
+        'glow': '0px 0px 20px 12px rgba(242, 80, 60, 0.2)',
+        'border-glow': '0px 0px 20px 0px rgba(245, 91, 50, 0.1), 0px 0px 20px 0px rgba(245, 91, 50, 0.1) inset',
       },
       screens: {
         phone: "375px",
@@ -60,9 +63,31 @@ export default {
       },
       maxWidth: {
         'screen': '1440px',
-      }
+      },
+      keyframes: {
+        'jump' : {
+          '0%': { transform: 'scale(0)' },
+          '50%': { transform: 'scale(1.2)' },
+          '100%': { transform: 'scale(1)' },
+        },
+      },
+      animation: {
+        'jump': 'jump 0.5s ease-in-out',
+      },
+
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'animate-delay': (value) => ({
+            animationDelay: value,
+          }),
+        },
+        { values: theme('transitionDelay') }
+      )
+    }),
+  ],
 }
 

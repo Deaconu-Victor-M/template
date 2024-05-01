@@ -1,1 +1,1 @@
-<div class=" h-[50px] tablet_landscape:h-[100px]"></div>
+<div class="h-[100px] tablet:h-[200px] laptop:h-[300px]"></div>
