@@ -16,6 +16,8 @@
   import profile3 from "/src/assets/images/profiles/profile3.webp";
   import profile4 from "/src/assets/images/profiles/profile4.avif";
 
+  import thumbnail from "/src/assets/images/Thumbnail.webp";
+
   import buildWith from "/src/assets/images/apps/built-with-pmfmai.webp";
 
   import star from "./assets/svg/star.svg";
@@ -327,7 +329,7 @@
 
         <!--? -------- Review Video -------- -->
         <VideoReview
-          thumbnail="/src/assets/images/Thumbnail.webp"
+          thumbnail={thumbnail}
           name="Vinita Temmert"
           title="AI App Creator"
           review="We had the idea up and running within days and the first person who tried it instantly said how can I pay you! And they invested $97 straight away. Idea to payment just like that!"
