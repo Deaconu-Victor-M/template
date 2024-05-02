@@ -48,6 +48,13 @@
       window.removeEventListener("scroll", handleScroll);
     };
   });
+
+  function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 </script>
 
 <main class="flex flex-col items-center bg-primary-50 overflow-x-clip">
@@ -92,7 +99,7 @@
           >
           <a
             href="#signup"
-            class="hidden py-3 text-lg leading-none text-white rounded-full px-7 bg-gradient-to-br from-primary-500 to-primary-400 tablet_landscape:block hover:ring-2 hover:shadow-glow hover:shadow-primary-500/20 hover:ring-primary-500 hover:ring-offset-2 group transform font-medium gap-2 items-center justify-center w-full pb-[12px] text-center text-nowrap tablet_landscape:w-auto hover:font-semibold transition-all duration-300 ease-in-out"
+            class="hidden py-3 text-lg leading-none text-white rounded-full px-7 bg-gradient-to-br from-primary-500 to-primary-400 tablet_landscape:block hover:ring-2  hover:shadow-primary-500/20 hover:ring-primary-500 hover:ring-offset-2 group transform font-medium gap-2 items-center justify-center w-full pb-[12px] text-center text-nowrap tablet_landscape:w-auto hover:font-semibold transition-all duration-300 ease-in-out"
             >Sign Up</a
           >
         </nav>
@@ -105,7 +112,7 @@
           >
           <a
             href="#signup"
-            class="py-3 text-lg leading-none text-white rounded-full px-7 bg-gradient-to-br from-primary-500 to-primary-400 hover:ring-2 hover:shadow-glow hover:shadow-primary-500/20 hover:ring-primary-500 hover:ring-offset-2 group transform font-medium gap-2 items-center justify-center pb-[12px] text-center text-nowrap tablet_landscape:w-auto hover:font-semibold transition-all duration-300 ease-in-out"
+            class="py-3 text-lg leading-none text-white rounded-full px-7 bg-gradient-to-br from-primary-500 to-primary-400 hover:ring-2 hover:shadow-primary-500/20 hover:ring-primary-500 hover:ring-offset-2 group transform font-medium gap-2 items-center justify-center pb-[12px] text-center text-nowrap tablet_landscape:w-auto hover:font-semibold transition-all duration-300 ease-in-out"
             >Sign Up</a
           >
       </div>
@@ -127,11 +134,11 @@
       <!--? -------- Title -------- -->
       <div class="flex flex-col items-center w-full gap-4">
         <h2
-          class="text-[calc(7vw)] tablet_landscape:text-5xl font-semibold text-center font-neue text-nowrap"
+          class="text-[calc(7vw)] tablet_landscape:text-5xl font-semibold text-center font-neue tablet:text-nowrap"
         >
           Everything you need to start <br />
           <div
-            class="bg-[url('/src/assets/svg/gradient-bg-text.svg')] bg-no-repeat bg-center bg-contain w-min tablet_landscape:py-6 px-4 inline-block"
+            class="bg-[url('/src/assets/svg/gradient-bg-text.svg')] bg-no-repeat bg-center bg-contain w-min tablet_landscape:py-6 px-4 inline-block text-nowrap"
           >
             <span class="text-white">earning from AI</span>
           </div>
@@ -270,10 +277,10 @@
         >
           Built with <br class="block laptop:hidden" />Pmfm.ai
         </h2>
-        <a
-          href="#signup"
+        <button
+          on:click={() => scrollToSection('pricing')}
           class="px-7 py-3 pt-4 text-lg tablet:text-xl leading-none text-white rounded-full tablet_landscape:text-2xl tablet_landscape:py-7 tablet_landscape:px-14 tablet_landscape:pt-8 font-neue bg-gradient-to-br from-primary-500 to-primary-400 hover:ring-2 hover:shadow-glow hover:shadow-primary-500/20 hover:ring-primary-500 hover:ring-offset-2 group transform font-medium gap-2 items-center justify-center pb-[12px] text-center text-nowrap tablet_landscape:w-auto hover:font-semibold transition-all duration-300 ease-in-out"
-          >Try for Yourself</a
+          >Try for Yourself</button
         >
       </div>
       <Carousel />
@@ -354,7 +361,7 @@
     <Divider />
 
     <!--! ========= FAQ ========= -->
-    <section
+    <section id="faq"
       class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
     >
       <!--? -------- Title -------- -->
@@ -453,7 +460,7 @@
     <Divider />
 
     <!--! ========= Pricing ========= -->
-    <section
+    <section id="pricing"
       class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
     >
       <!--? -------- Title -------- -->
@@ -543,19 +550,19 @@
           <!--? -------- Socials -------- -->
           <div class="flex flex-row gap-4 mt-4">
             <a
-              href="#x_account"
+              href="https://twitter.com/pmfm_ai" target="_blank"
               class="p-2 transition-all duration-200 ease-in-out bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
             >
               <img src={xLogo} alt="x-logo" />
             </a>
             <a
-              href="#linkedin_account"
+              href="https://www.linkedin.com/company/paymeformyai/" target="_blank"
               class="p-2 transition-all duration-200 ease-in-out bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
             >
               <img src={linkedinLogo} alt="linkedin-logo" />
             </a>
             <a
-              href="#fb_account"
+              href="https://web.facebook.com/profile.php?id=61557464597958&_rdc=1&_rdr" target="_blank"
               class="p-2 transition-all duration-200 ease-in-out bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
             >
               <img src={facebookLogo} alt="facebook-logo" />
@@ -571,13 +578,13 @@
             >
               Company
             </h3>
-            <a href="#features" class="text-lg text-black/60 hover:text-black"
+            <a href="https://medium.com/@pmfm_ai" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Blog</a
             >
-            <a href="#pricing" class="text-lg text-black/60 hover:text-black"
+            <a href="https://reddit.com/r/PayMeForMyAI" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Reddit</a
             >
-            <a href="#faq" class="text-lg text-black/60 hover:text-black"
+            <a href="https://app.getreditus.com/marketplace/paymeformyai" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Affiliates</a
             >
           </div>
@@ -587,14 +594,14 @@
             >
               Product
             </h3>
-            <a href="#features" class="text-lg text-black/60 hover:text-black"
+            <a href="https://github.com/asaxena0824/PayMeForMyAI-Themes" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Github</a
             >
-            <a href="#pricing" class="text-lg text-black/60 hover:text-black"
-              >FAQs</a
+            <button on:click={() => scrollToSection('faq')} class="text-lg text-black/60 hover:text-black w-min"
+              >FAQs</button
             >
-            <a href="#faq" class="text-lg text-black/60 hover:text-black"
-              >Pricing</a
+            <button on:click={() => scrollToSection('pricing')} class="text-lg text-black/60 hover:text-black w-min"
+              >Pricing</button
             >
           </div>
           <div class="flex flex-col gap-3 col-span-1 *:text-nowrap">
@@ -603,13 +610,13 @@
             >
               Resources
             </h3>
-            <a href="#features" class="text-lg text-black/60 hover:text-black"
+            <a href="https://discord.gg/FnktGy3mkV" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Discord Support</a
             >
-            <a href="#pricing" class="text-lg text-black/60 hover:text-black"
+            <a href="https://paymeformyai.featurebase.app/" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Public Roadmap</a
             >
-            <a href="#faq" class="text-lg text-black/60 hover:text-black"
+            <a href="https://www.youtube.com/@Pmfm_ai" class="text-lg text-black/60 hover:text-black" target="_blank"
               >YouTube</a
             >
           </div>

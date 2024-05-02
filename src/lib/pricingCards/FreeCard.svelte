@@ -20,7 +20,7 @@
       <p class="text-lg text-black/60">Try our product</p>
     </div>
     <div class="flex flex-row items-end flex-nowrap">
-      <span class="text-4xl font-extrabold font-neue">$0</span>
+      <span class="text-4xl font-bold font-neue">$0</span>
       <span class="mb-[2px] text-lg font-semibold font-neue text-black/60"
         >/month</span
       >

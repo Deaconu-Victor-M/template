@@ -16,7 +16,7 @@
       <p class="text-lg text-black/60">Try our product</p>
     </div>
     <div class="flex flex-row items-end flex-nowrap">
-      <span class="text-4xl font-extrabold font-neue">$19</span>
+      <span class="text-4xl font-bold font-neue">$19</span>
       <span class="mb-[2px] text-lg font-semibold font-neue text-black/60"
         >/month</span
       >
@@ -42,7 +42,7 @@
           </svg>
         </div>
         <p class="mt-1 text-base text-black">
-          Create up to <b>15</b> custom AI apps
+          Create up to <b>20</b> custom AI apps
         </p>
       </li>
       <li class="flex flex-row items-center gap-2">
@@ -65,7 +65,7 @@
           </svg>
         </div>
 
-        <p class="mt-1 text-base text-black"><b>Monetize</b> your apps</p>
+        <p class="mt-1 text-base text-black"><b>All</b> Pro Features</p>
       </li>
       <li class="flex flex-row items-center gap-2">
         <div
@@ -88,31 +88,7 @@
         </div>
 
         <p class="mt-1 text-base text-black">
-          Limited Analytics (last <b>10</b>)
-        </p>
-      </li>
-      <li class="flex flex-row items-center gap-2">
-        <div
-          class="flex items-center justify-center pb-[6px] pr-[6px] pl-[7px] pt-[7px] bg-black rounded-full aspect-square"
-        >
-          <svg
-            width="10"
-            height="8"
-            viewBox="0 0 10 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 4.85714L3.06337 6.67488C3.26872 6.85578 3.58083 6.84007 3.76698 6.63946L9 1"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-            />
-          </svg>
-        </div>
-
-        <p class="mt-1 text-base text-black">
-          Use <b>Custom</b> domain or embedding
+          Advanced Analytics (last <b>200</b>)
         </p>
       </li>
       <li class="flex flex-row items-center gap-2">
@@ -136,7 +112,31 @@
         </div>
 
         <p class="mt-1 text-base text-black">
-          Guaranteed updates to any new feature.
+          Prioritized feature requests.
+        </p>
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <div
+          class="flex items-center justify-center pb-[6px] pr-[6px] pl-[7px] pt-[7px] bg-black rounded-full aspect-square"
+        >
+          <svg
+            width="10"
+            height="8"
+            viewBox="0 0 10 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 4.85714L3.06337 6.67488C3.26872 6.85578 3.58083 6.84007 3.76698 6.63946L9 1"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
+        <p class="mt-1 text-base text-black">
+          Early access to new features.
         </p>
       </li>
       <li class="flex flex-row items-center gap-2">
