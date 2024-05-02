@@ -90,14 +90,48 @@
 </script>
 
 <section
-  class="flex flex-col items-center justify-between w-full h-full gap-12 px-4 py-3 tablet:px-9 laptop:items-end laptop:flex-row"
+  id="hero"
+  class="relative flex flex-col items-center justify-between w-full h-full gap-12 px-4 py-3 tablet:px-9 laptop:items-end laptop:flex-row"
 >
+  <svg
+      class="absolute -top-80  -left-44  h-[315px] w-[665px] select-none -z-10 blur-3xl rounded-full -rotate-6"
+      width="667"
+      height="316"
+      viewBox="0 0 667 316"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <ellipse cx="333.162" cy="157.649" rx="332.916" ry="157.5" class=" fill-primary-500/10" />
+    </svg>
+    <svg
+      class="absolute -bottom-52 -left-20  h-[315px] w-[665px] select-none blur-3xl -z-10 rounded-full -rotate-6 scale-125"
+      width="667"
+      height="516"
+      viewBox="0 0 667 316"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <ellipse cx="333.162" cy="157.649" rx="332.916" ry="157.5" class=" fill-primary-500/10" />
+    </svg>
+    <svg
+      class="absolute -bottom-10 -left-72 h-[315px] w-[665px] select-none blur-3xl -z-10 rounded-full -rotate-6 scale-50"
+      width="667"
+      height="516"
+      viewBox="0 0 667 316"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <ellipse cx="333.162" cy="157.649" rx="332.916" ry="157.5" class=" fill-primary-400/15" />
+    </svg>
   <!--? ========= Text Block ========= -->
   <div class="flex flex-col items-center gap-12 laptop:items-start">
+
     <h1
       class="text-[calc(9vw)] tablet_landscape:text-[calc(7vw)] laptop:text-[calc(5vw)] desktop:text-7xl font-semibold text-center leading-none font-neue laptop:text-start flex-nowrap text-nowrap"
     >
-      <div class="flex flex-row items-center gap-1 tablet:gap-2 tablet_landscape:gap-4">
+      <div
+        class="flex flex-row items-center gap-1 tablet:gap-2 tablet_landscape:gap-4"
+      >
         <div
           class="inline-block px-3 mb-2 border rounded-full tablet_landscape:mb-4 overflow-clip tablet:px-5 tablet_landscape:border-2 border-primary-500"
         >
@@ -132,18 +166,18 @@
     <p
       class="text-lg text-center tablet:text-xl laptop:text-start text-balance"
     >
-      Pmfm.ai enables <b>creators</b> to launch and <b>monetize</b> <br
-        class="hidden tablet_landscape:block"
-      />
-      their custom AI <b>apps</b> without code. <br /> <br /> Start by building an AI
-      app. Publish the <b>app</b> <br class="hidden tablet_landscape:block" />
+      Pmfm.ai enables <b>creators</b> to launch and <b>monetize</b>
+      <br class="hidden tablet_landscape:block" />
+      their custom AI <b>apps</b> without code. <br /> <br /> Start by building
+      an AI app. Publish the <b>app</b>
+      <br class="hidden tablet_landscape:block" />
       to your <b>website</b> with in-built authentication.
       <br class="hidden tablet_landscape:block" />
       <b>Monetize</b> it by connecting your Stripe. <b>White-label</b> it
       <br class="hidden tablet_landscape:block" />
       with your own brand. Retain complete control
-      <br class="hidden tablet_landscape:block" /> over <b>analytics</b> and <b>revenue</b> as
-      your app scales.
+      <br class="hidden tablet_landscape:block" /> over <b>analytics</b> and
+      <b>revenue</b> as your app scales.
     </p>
     <!--? -------- CTA Buttons -------- -->
     <div

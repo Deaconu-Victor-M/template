@@ -18,11 +18,6 @@
 
   import thumbnail from "/src/assets/images/Thumbnail.webp";
 
-  import buildWith from "/src/assets/images/apps/built-with-pmfmai.webp";
-
-  import star from "./assets/svg/star.svg";
-  import arrow from "/src/assets/svg/hand-drawn-arrow.svg";
-
   import paymentDashboard from "/src/assets/images/functionalities/payment-dashboard.png";
   import appHosting from "/src/assets/images/functionalities/app-hosting.jpeg";
   import design from "/src/assets/images/functionalities/design.png";
@@ -32,6 +27,10 @@
   import xLogo from "/src/assets/svg/logos/x-logo.svg";
   import linkedinLogo from "/src/assets/svg/logos/linkedin-logo.svg";
   import facebookLogo from "/src/assets/svg/logos/fb-logo.svg";
+
+  import shadowReview from "/src/assets/svg/shadow-reviews.svg";
+  import shadowFAQ from "/src/assets/svg/shadow-faq.svg";
+
   import { onMount } from "svelte";
 
   let scrolled = false;
@@ -57,7 +56,7 @@
   }
 </script>
 
-<main class="flex flex-col items-center bg-primary-50 overflow-x-clip">
+<main class="flex flex-col items-center overflow-x-clip">
   <!--! ========= HEADER ========= -->
   <header style="transition: max-height 0.15s ease-out;"
     class="sticky top-0 z-50 flex flex-row items-center justify-center w-full {scrolled
@@ -290,8 +289,9 @@
 
     <!--! ========= REVIEWS ========= -->
     <section
-      class="flex flex-col items-center w-full gap-10 px-4 laptop:gap-16 tablet:px-9"
+      class="relative flex flex-col items-center w-full gap-10 px-4 laptop:gap-16 tablet:px-9"
     >
+      <img src="{shadowReview}" alt="shadow" class="absolute hidden h-full select-none -z-10 -top-20 tablet_landscape:block" draggable="false">
       <!--? -------- Title -------- -->
       <div class="flex flex-row items-center justify-between w-full gap-7">
         <h2
@@ -362,8 +362,9 @@
 
     <!--! ========= FAQ ========= -->
     <section id="faq"
-      class="flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
+      class="relative flex flex-col items-center w-full gap-10 px-4 py-3 laptop:gap-16 tablet:px-9"
     >
+      <img src="{shadowFAQ}" alt="shadow" class="absolute hidden scale-150 select-none blur-3xl h-fill tablet_landscape:block -z-10 -top-20" draggable="false">
       <!--? -------- Title -------- -->
       <div class="flex flex-col items-center w-full tablet_landscape:gap-4">
         <h2
@@ -535,10 +536,10 @@
     <footer class="flex flex-col w-full px-4 py-6 tablet:px-9 gap-28">
       <div class="flex flex-col justify-between gap-20 laptop:flex-row">
         <div class="flex flex-col items-start">
-          <a
-            href="#hero"
+          <button
+            on:click={() => scrollToSection('hero')}
             class="text-2xl font-bold text-transparent tablet:text-3xl tablet_landscape:text-5xl text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
-            >Pmfm.ai</a
+            >Pmfm.ai</button
           >
           <p
             class="text-lg leading-tight text-start tablet:text-xl text-black/60 tablet:text-nowrap"
@@ -551,19 +552,19 @@
           <div class="flex flex-row gap-4 mt-4">
             <a
               href="https://twitter.com/pmfm_ai" target="_blank"
-              class="p-2 transition-all duration-200 ease-in-out bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
+              class="p-2 transition-all duration-200 ease-in-out hover:scale-110 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
             >
               <img src={xLogo} alt="x-logo" />
             </a>
             <a
               href="https://www.linkedin.com/company/paymeformyai/" target="_blank"
-              class="p-2 transition-all duration-200 ease-in-out bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
+              class="p-2 transition-all duration-200 ease-in-out hover:scale-110 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
             >
               <img src={linkedinLogo} alt="linkedin-logo" />
             </a>
             <a
               href="https://web.facebook.com/profile.php?id=61557464597958&_rdc=1&_rdr" target="_blank"
-              class="p-2 transition-all duration-200 ease-in-out bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
+              class="p-2 transition-all duration-200 ease-in-out hover:scale-110 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
             >
               <img src={facebookLogo} alt="facebook-logo" />
             </a>
