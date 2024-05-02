@@ -139,7 +139,7 @@
           <div
             class="bg-[url('/src/assets/svg/gradient-bg-text.svg')] bg-no-repeat bg-center bg-contain w-min tablet_landscape:py-6 px-4 inline-block text-nowrap"
           >
-            <span class="text-white">earning from AI</span>
+            <span class="text-white text-nowrap">earning from AI</span>
           </div>
         </h2>
         <p
