@@ -2,7 +2,7 @@
   import profile1 from "/src/assets/images/profiles/profile1.webp";
   import profile2 from "/src/assets/images/profiles/profile2.webp";
   import profile3 from "/src/assets/images/profiles/profile3.webp";
-  import profile4 from "/src/assets/images/profiles/profile4.avif";
+  import profile4 from "/src/assets/images/profiles/profile4.webp";
 
   import buildWith from "/src/assets/images/apps/built-with-pmfmai.webp";
 
@@ -163,15 +163,16 @@
       </div>
       IN MINUTES
     </h1>
+    <!-- Every br will be hidden when the width is small enough so that the text doesn't look weird -->
     <p
       class="text-lg text-center tablet:text-xl laptop:text-start text-balance"
     >
-      Pmfm.ai enables <b>creators</b> to launch and <b>monetize</b>
+      Our app enables <b>creators</b> to launch and <b>monetize</b>
       <br class="hidden tablet_landscape:block" />
-      their custom AI <b>apps</b> without code. <br /> <br /> Start by building
+      their custom <b>apps</b> without code. <br /> <br /> Start by building
       an AI app. Publish the <b>app</b>
       <br class="hidden tablet_landscape:block" />
-      to your <b>website</b> with in-built authentication.
+      to your <b>website</b> with built-in authentication.
       <br class="hidden tablet_landscape:block" />
       <b>Monetize</b> it by connecting your Stripe. <b>White-label</b> it
       <br class="hidden tablet_landscape:block" />
@@ -257,22 +258,22 @@
         <img
           src={profile1}
           alt="David"
-          class="inline-block border-2 rounded-full pointer-events-none w-14 h-14 aspect-square border-primary-50"
+          class="object-cover border-2 rounded-full pointer-events-none w-14 h-14 aspect-square border-primary-50"
         />
         <img
           src={profile2}
           alt="Alex"
-          class="inline-block border-2 rounded-full pointer-events-none w-14 h-14 aspect-square border-primary-50"
+          class="object-cover border-2 rounded-full pointer-events-none w-14 h-14 aspect-square border-primary-50"
         />
         <img
           src={profile3}
           alt="Ali"
-          class="inline-block border-2 rounded-full pointer-events-none w-14 h-14 aspect-square border-primary-50"
+          class="object-cover border-2 rounded-full pointer-events-none w-14 h-14 aspect-square border-primary-50"
         />
         <img
           src={profile4}
           alt="Ali"
-          class="inline-block border-2 rounded-full pointer-events-none w-14 h-14 aspect-square border-primary-50"
+          class="object-cover border-2 rounded-full pointer-events-none w-14 h-14 aspect-square border-primary-50"
         />
       </div>
       <div class="flex flex-col items-center gap-2 laptop:items-start">
@@ -298,7 +299,7 @@
   >
     <div class="flex flex-row items-start w-full gap-5 tablet:gap-10">
       <p class="text-xl font-semibold tablet:text-3xl font-neue text-nowrap">
-        Built with <br /> Pmfm.ai
+        Built with <br /> Product_name
       </p>
       <img
         src={arrow}

@@ -14,7 +14,7 @@
   import profile1 from "/src/assets/images/profiles/profile1.webp";
   import profile2 from "/src/assets/images/profiles/profile2.webp";
   import profile3 from "/src/assets/images/profiles/profile3.webp";
-  import profile4 from "/src/assets/images/profiles/profile4.avif";
+  import profile4 from "/src/assets/images/profiles/profile4.webp";
 
   import thumbnail from "/src/assets/images/Thumbnail.webp";
 
@@ -70,7 +70,7 @@
         <a href="#hero" class="">
           <span
             class="text-2xl font-bold text-transparent font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
-            >Pmfm.ai</span
+            >Logo</span
           >
         </a>
         <nav class="flex flex-row items-center gap-8 font-semibold font-neue">
@@ -145,7 +145,7 @@
         <p
           class="text-lg text-center tablet:text-xl tablet_landscape:px-20 text-black/60"
         >
-          Pmfm.ai comes with everything you need to create and launch your
+            Our product comes with everything you need to create and launch your
           custom AI chatbot app without code in minutes.
         </p>
       </div>
@@ -266,6 +266,7 @@
 
     <Divider />
 
+     <!--! ========= Apps ========= -->
     <section
       class="flex flex-col items-center w-full gap-10 px-4 laptop:gap-16 tablet:px-9"
     >
@@ -274,7 +275,7 @@
         <h2
           class="text-2xl font-semibold leading-none tablet:text-3xl tablet_landscape:text-5xl font-neue text-nowrap"
         >
-          Built with <br class="block laptop:hidden" />Pmfm.ai
+          Built with <br class="hidden laptop:block" />productivity in mind
         </h2>
         <button
           on:click={() => scrollToSection('pricing')}
@@ -315,45 +316,45 @@
         <!--? -------- Review Text -------- -->
         <TextReview
           profile={profile1}
-          name="Darren Coxion"
-          title="Founder Coxion AI"
-          review="Thus far been hugely impressed with what Pay Me For My AI offer. I've used their bots with ease inside my CourseBots revision guides and they are a huge value add. I like how I can add them to a subdomain of my website. Really helpful. Keep up the good work!"
+          name="John Doe"
+          title="Founder"
+          review=" This product boasts an innovative interface that simplifies the app development process. Its intuitive design allows even beginners to quickly grasp the concepts and start building functional apps without getting lost in complex coding languages."
         />
         <!--? -------- Review Text -------- -->
         <TextReview
           profile={profile2}
-          name="Darren Coxion"
-          title="Founder Coxion AI"
-          review="Thus far been hugely impressed with what Pay Me For My AI offer. I've used their bots with ease inside my CourseBots revision guides and they are a huge value add. I like how I can add them to a subdomain of my website. Really helpful. Keep up the good work!"
+          name="John Doe"
+          title="Founder"
+          review="Building apps has never been easier with this product. Its streamlined workflow and efficient tools help developers save time and effort, allowing them to focus more on creativity and less on technicalities. Its comprehensive testing tools help identify and address potential issues early in the development cycle, ensuring a smooth user experience across different platforms and devices."
         />
         <!--? -------- Review Text -------- -->
         <TextReview
           profile={profile4}
-          name="Braxom"
+          name="John Doe"
           title="Founder"
-          review="No cap - the most accommodating and helpful support I've had with a vendor EVER. Would give 6 stars"
+          review="From simple mobile applications to complex software solutions, this product caters to a wide range of development needs."
         />
 
         <!--? -------- Review Video -------- -->
         <VideoReview
           thumbnail={thumbnail}
-          name="Vinita Temmert"
-          title="AI App Creator"
-          review="We had the idea up and running within days and the first person who tried it instantly said how can I pay you! And they invested $97 straight away. Idea to payment just like that!"
+          name="John Doe"
+          title="App Creator"
+          review="With a strong emphasis on performance, this product delivers apps that are not only visually appealing but also robust and reliable."
         />
         <!--? -------- Review Text -------- -->
         <TextReview
           profile={profile3}
-          name="Ben"
-          title="Founder, Logodalle"
-          review="Aditya has created an amazing platform for chatbot and saas creators. I use pmfm.ai to host chatbots on my own subdomains and would highly recommend it. Initial setup was easy and the built-in analytics have helped me fine-tune my products. Great discord server filled with other builders in the space as well."
+          name="John Doe"
+          title="Founder"
+          review="Beyond its features, this product offers access to a vibrant community of developers and a wealth of resources. Whether you're looking for tutorials, documentation, or troubleshooting tips, you'll find plenty of support to help you overcome any obstacles and unleash your creativity."
         />
         <!--? -------- Review Text -------- -->
         <TextReview
           profile={profile4}
-          name="Ben"
-          title="Founder, Logodalle"
-          review="Aditya has created an amazing platform for chatbot and saas creators. I use pmfm.ai to host chatbots on my own subdomains and would highly recommend it. Initial setup was easy and the built-in analytics have helped me fine-tune my products. Great discord server filled with other builders in the space as well."
+          name="John Doe"
+          title="Founder"
+          review="One of the best aspects of this product is its commitment to continuous improvement. With regular updates and new features based on user feedback and emerging trends, it stays ahead of the curve, empowering developers to stay competitive in a rapidly evolving tech landscape."
         />
       </div>
     </section>
@@ -382,21 +383,20 @@
         class="flex flex-col items-center justify-center w-full transition-all"
       >
         <!--? -------- Questions -------- -->
+        <!-- You can add as many questions as you want. You can also put all the questions in a list and do a for loop to minimize the code -->
+        <!-- If you need to add a link inside a question put the word inside this: <a href='https://the_link_to_website_or_page.com' target='_blank' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>Your word here</a> -->
+        <!-- You can see an example in some questions below -->
         <QuestionCard
-          question="How can I create my AI app on Pmfm.ai?"
-          answer="You will need to <a href='#login' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>login</a> and then click on the 'Create App' button. A form will then open up where you can provide your app details. If you plan to monetize, you will need to connect your bank account or debit card with Stripe. Here is a <a href='https://www.youtube.com/watch?v=sslaqOvOM84&ab_channel=Pmfm_ai' target='_blank' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>video</a> that explains the entire process step-by-step."
+          question="How can I create my app?"
+          answer="You will need to <a href='#login' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>login</a> and then click on the 'Create App' button. A form will then open up where you can provide your app details. If you plan to monetize, you will need to connect your bank account or debit card with Stripe. Here is a <a href='https://www.youtube.com' target='_blank' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>video</a> that explains the entire process step-by-step."
         />
         <QuestionCard
           question="Can I use my own website or subdomain?"
           answer="Absolutely! You can publish your app to your website or subdomain by making a simple DNS change. Once you've launched your app, you will see this option available in your dashboard."
         />
         <QuestionCard
-          question="What models can I use to build my AI app on Pmfm.ai?"
-          answer="We support AI models from OpenAI, Anthropic, Meta, Mistral, and Stability AI."
-        />
-        <QuestionCard
           question="Do I need an API Key?"
-          answer="No, you don't need any API Key to build your app. We take care of all the API expenses so all you have to do is focus on your Pmfm.ai apps 😇"
+          answer="No, you don't need any API Key to build your app. We take care of all the API expenses so all you have to do is focus on your apps"
         />
         <QuestionCard
           question="Can I embed the AI app on my own website?"
@@ -408,7 +408,7 @@
         />
         <QuestionCard
           question="Where can I see the payments received for my product?"
-          answer="To access your connected Stripe account for payments, please <a href='#login' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>login</a> to Pmfm.ai. From your dashboard, please click on the top right drop down menu with your name. You will find an option called 'Stripe Access'. Clicking on this will redirect you to your connected Stripe account."
+          answer="To access your connected Stripe account for payments, please <a href='#login' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>login</a>. From your dashboard, please click on the top right drop down menu with your name. You will find an option called 'Stripe Access'. Clicking on this will redirect you to your connected Stripe account."
         />
         <QuestionCard
           question="How do I access analytics and customer data for my app?"
@@ -416,7 +416,7 @@
         />
         <QuestionCard
           question="How can I contact support?"
-          answer="If you need help with Pmfm.ai or have any other questions, you can chat with us by clicking on the bottom-right widget, or submit a support ticket through the <a href='https://discord.com/invite/FnktGy3mkV' target='_blank' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>discord</a>, or reach out to us at support@paymeformyai.com"
+          answer="If you need help with anything or have any other questions, you can chat with us by clicking on the bottom-right widget, or submit a support ticket through the <a href='https://discord.com' target='_blank' class='font-bold underline transition-colors duration-200 ease-out underline-offset-2 hover:text-primary-500'>discord</a>, or reach out to us at support@paymeformyai.com"
         />
       </div>
     </section>
@@ -438,10 +438,11 @@
           class="text-lg text-center tablet:text-xl tablet_landscape:px-20 text-black/60"
         >
           Message me at <br />
+          <!-- ~~~~ Add your email here (Change the text inside and the mailto:...) ~~~~~ -->
           <a
-            href="mailto:aditya@paymeformyai.com"
+            href="mailto:youremail@domain.com"
             class="flex flex-row items-end gap-2 leading-none text-transparent underline transition-all duration-300 group decoration-primary-400 underline-offset-2 bg-gradient-to-br opacity-70 hover:opacity-100 from-primary-500 to-primary-400 bg-clip-text hover:font-bold"
-            >aditya@paymeformyai.com <svg
+            >youremail@domain.com<svg
               width="14"
               height="13"
               viewBox="0 0 14 13"
@@ -496,7 +497,6 @@
     <Divider />
 
     <!--! ========= CTA Sign Up ========= -->
-
     <section
       class="flex flex-col items-center w-full px-4 laptop:gap-16 tablet:px-9"
     >
@@ -508,12 +508,12 @@
           <h2
             class="text-2xl font-semibold leading-none text-center text-white tablet:text-3xl tablet_landscape:text-5xl font-neue tablet:text-nowrap"
           >
-            Build your next AI SaaS
+            Build your next APP now
           </h2>
           <p
             class="text-lg leading-tight text-center tablet:text-xl tablet_landscape:px-20 text-white/60"
           >
-            Use Pmfm.ai as your complete stack for your next AI business
+            Use our product as your complete stack for your next business
           </p>
         </div>
         <a
@@ -538,32 +538,33 @@
         <div class="flex flex-col items-start">
           <button
             on:click={() => scrollToSection('hero')}
-            class="text-2xl font-bold text-transparent tablet:text-3xl tablet_landscape:text-5xl text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
-            >Pmfm.ai</button
+            class="pb-1 text-2xl font-bold text-transparent tablet:text-3xl tablet_landscape:text-5xl text-start font-neue bg-gradient-to-br from-primary-500 to-primary-400 bg-clip-text"
+            >Your logo</button
           >
           <p
             class="text-lg leading-tight text-start tablet:text-xl text-black/60 tablet:text-nowrap"
           >
-            Pmfm.ai enables creators to launch and monetize <br
+            Our product enables creators to launch and monetize <br
               class="hidden tablet:block"
             /> their custom AI apps without code.
           </p>
           <!--? -------- Socials -------- -->
+          <!-- Change the links and names here as you please -->
           <div class="flex flex-row gap-4 mt-4">
             <a
-              href="https://twitter.com/pmfm_ai" target="_blank"
+              href="https://twitter.com/deaconu_victor" target="_blank"
               class="p-2 transition-all duration-200 ease-in-out hover:scale-110 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
             >
               <img src={xLogo} alt="x-logo" />
             </a>
             <a
-              href="https://www.linkedin.com/company/paymeformyai/" target="_blank"
+              href="https://twitter.com/deaconu_victor" target="_blank"
               class="p-2 transition-all duration-200 ease-in-out hover:scale-110 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
             >
               <img src={linkedinLogo} alt="linkedin-logo" />
             </a>
             <a
-              href="https://web.facebook.com/profile.php?id=61557464597958&_rdc=1&_rdr" target="_blank"
+              href="https://twitter.com/deaconu_victor" target="_blank"
               class="p-2 transition-all duration-200 ease-in-out hover:scale-110 bg-gradient-to-br from-primary-500 to-primary-400 rounded-small hover:ring-2 hover:ring-primary-500 hover:ring-offset-2"
             >
               <img src={facebookLogo} alt="facebook-logo" />
@@ -579,13 +580,13 @@
             >
               Company
             </h3>
-            <a href="https://medium.com/@pmfm_ai" class="text-lg text-black/60 hover:text-black" target="_blank"
+            <a href="https://twitter.com/deaconu_victor" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Blog</a
             >
-            <a href="https://reddit.com/r/PayMeForMyAI" class="text-lg text-black/60 hover:text-black" target="_blank"
+            <a href="https://twitter.com/deaconu_victor" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Reddit</a
             >
-            <a href="https://app.getreditus.com/marketplace/paymeformyai" class="text-lg text-black/60 hover:text-black" target="_blank"
+            <a href="https://twitter.com/deaconu_victor" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Affiliates</a
             >
           </div>
@@ -595,7 +596,7 @@
             >
               Product
             </h3>
-            <a href="https://github.com/asaxena0824/PayMeForMyAI-Themes" class="text-lg text-black/60 hover:text-black" target="_blank"
+            <a href="https://github.com/Deaconu-Victor-M" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Github</a
             >
             <button on:click={() => scrollToSection('faq')} class="text-lg text-black/60 hover:text-black w-min"
@@ -611,13 +612,13 @@
             >
               Resources
             </h3>
-            <a href="https://discord.gg/FnktGy3mkV" class="text-lg text-black/60 hover:text-black" target="_blank"
+            <a href="https://twitter.com/deaconu_victor" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Discord Support</a
             >
-            <a href="https://paymeformyai.featurebase.app/" class="text-lg text-black/60 hover:text-black" target="_blank"
+            <a href="https://twitter.com/deaconu_victor" class="text-lg text-black/60 hover:text-black" target="_blank"
               >Public Roadmap</a
             >
-            <a href="https://www.youtube.com/@Pmfm_ai" class="text-lg text-black/60 hover:text-black" target="_blank"
+            <a href="https://twitter.com/deaconu_victor" class="text-lg text-black/60 hover:text-black" target="_blank"
               >YouTube</a
             >
           </div>
@@ -628,13 +629,13 @@
         />
 
         <a
-          href="#da"
+          href="#redirect-to-terms"
           class="underline transition-all ease-in-out text-bold hover:font-bold"
           >Terms</a
         >
         ・
         <a
-          href="#da"
+          href="#redirect-to-privacy"
           class="underline transition-all ease-in-out text-bold hover:font-bold"
           >Privacy</a
         >

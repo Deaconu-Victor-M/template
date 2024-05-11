@@ -16,7 +16,7 @@
     class="flex flex-row items-center justify-between w-full gap-5 py-3 px-7"
   >
     <p
-      class="text-xl font-semibold tablet_landscape:text-2xl font-neue text-start"
+      class="text-lg font-semibold tablet_landscape:text-xl text-start"
     >
       {question}
     </p>
@@ -45,7 +45,7 @@
       </svg>
     </div>
   </button>
-  <p class="px-7 pb-5 text-black/70 text-xl text-start {buttonClicked ? '' : 'hidden'}">
+  <p class="px-7 pb-5 text-black/70 text-lg tablet_landscape:text-xl text-start {buttonClicked ? '' : 'hidden'}">
     {@html answer}
   </p>
 </div>

@@ -1,78 +1,73 @@
 <script>
   // The apps that will be shown in the top carousel
-  import vinobot from "/src/assets/images/apps/Vinbot.webp";
-  import logodalle from "/src/assets/images/apps/LogoDalle.webp";
-  import openToWork from "/src/assets/images/apps/OpenToWork.webp";
-  import productScan from "/src/assets/images/apps/ProductScan.webp";
-  import claude from "/src/assets/images/apps/Claude.webp";
-  import aiTravelPlanner from "/src/assets/images/apps/AITravelPlanner.webp";
+  import placeholderBG from "/src/assets/images/apps/dark-bg.png";
   const appsTop = [
     {
-      appName: "Vinobot",
-      link: "https://vinobot.justben.fyi/",
-      linkName: "vinobot.justben.fyi",
-      image: vinobot,
+      appName: "Name1",
+      link: "https://cal.com/designspace/30min",
+      linkName: "cal.com/designspace",
+      image: placeholderBG,
     },
     {
-      appName: "Logodalle",
-      link: "https://logodalle.shop/",
-      linkName: "logodalle.shop",
-      image: logodalle,
+      appName: "Name2",
+      link: "https://cal.com/designspace/30min",
+      linkName: "cal.com/designspace",
+      image: placeholderBG,
     },
     {
-      appName: "OpenToWork",
-      link: "https://pmfm.ai/OpenToWork",
-      linkName: "pmfm.ai/OpenToWork",
-      image: openToWork,
+      appName: "Name3",
+      link: "https://cal.com/designspace/30min",
+      linkName: "cal.com/designspace",
+      image: placeholderBG,
     },
     {
-      appName: "Vinobot",
-      link: "https://vinobot.justben.fyi/",
-      linkName: "vinobot.justben.fyi",
-      image: vinobot,
+      appName: "Name4",
+      link: "https://cal.com/designspace/30min",
+      linkName: "cal.com/designspace",
+      image: placeholderBG,
     },
   ];
 
   // The apps that will be shown in the bottom carousel
   const appsBottom = [
     {
-      appName: "ProductScan",
-      link: "https://pmfm.ai/ProductScan",
-      linkName: "pmfm.ai/ProductScan",
-      image: productScan,
+      appName: "Name5",
+      link: "https://cal.com/designspace/30min",
+      linkName: "cal.com/designspace",
+      image: placeholderBG,
     },
     {
-      appName: "Claude",
-      link: "https://pmfm.ai/claude",
-      linkName: "pmfm.ai/claude",
-      image: claude,
+      appName: "Name6",
+      link: "https://cal.com/designspace/30min",
+      linkName: "cal.com/designspace",
+      image: placeholderBG,
     },
     {
-      appName: "AITrevelPlanner",
-      link: "https://travelplanner.gptbotdirectory.com/",
-      linkName: "travelplanner.gptbotdirectory.com",
-      image: aiTravelPlanner,
+      appName: "Name7",
+      link: "https://cal.com/designspace/30min",
+      linkName: "cal.com/designspace",
+      image: placeholderBG,
     },
     {
-      appName: "ProductScan",
-      link: "https://pmfm.ai/ProductScan",
-      linkName: "pmfm.ai/ProductScan",
-      image: productScan,
+      appName: "Name8",
+      link: "https://cal.com/designspace/30min",
+      linkName: "cal.com/designspace",
+      image: placeholderBG,
     },
   ];
   // this will only show on the phone version to also showcase the first and last apps for both carousels
   const appsPhone = [
     {
-      appName: "OpenToWork",
-      link: "https://pmfm.ai/OpenToWork",
-      linkName: "pmfm.ai/OpenToWork",
-      image: openToWork,
+      appName: "Name3",
+      link: "https://cal.com/designspace/30min",
+      linkName: "cal.com/designspace",
+      image: placeholderBG,
     },
     {
-      appName: "ProductScan",
-      link: "https://pmfm.ai/ProductScan",
-      linkName: "pmfm.ai/ProductScan",
-      image: productScan,
+      appName: "Name8",
+      link: "https://twitter.com/deaconu_victor",
+      linkName: "cal.com/designspace",
+      image: placeholderBG,
     },
   ];
 

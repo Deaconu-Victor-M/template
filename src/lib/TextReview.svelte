@@ -12,7 +12,7 @@
       <img
         src={profile}
         alt="Ali"
-        class="inline-block rounded-full pointer-events-none w-14 h-14 aspect-square"
+        class="inline-block object-cover rounded-full pointer-events-none w-14 h-14 aspect-square"
       />
       <div class="flex flex-col items-start">
         <h3 class="text-2xl font-semibold leading-none font-neue">{name}</h3>
